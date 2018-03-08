@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="roberth.com.applivrus">
+
+    <application
+        android:name="com.orm.SugarApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Biblioteca"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="VERSION"
+            android:value="1" />
+        <meta-data
+            android:name="QUERY_LOG"
+            android:value="true" />
+
+        <activity android:name=".app.LoginActivity"
+            android:label="Biblioteca">
+            <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter></activity>
+        <activity
+            android:name=".app.ListaLivrosActivity"
+            android:label="Meus Livros">
+
+        </activity>
+        <activity
+            android:name=".app.FormularioLivroActivity"
+            android:label="Informações do Livro"
+            android:parentActivityName=".app.ListaLivrosActivity" />
+        <activity
+            android:name=".app.ListaAutoresActivity"
+            android:label="Lista de autores"
+            android:parentActivityName=".app.ListaLivrosActivity" />
+        <activity
+            android:name=".app.DetalheLivroActivity"
+            android:parentActivityName=".app.ListaLivrosActivity" />
+        <activity
+            android:name=".app.LivrosStatus"
+            android:label="Progresso e avaliação"
+            android:parentActivityName=".app.ListaLivrosActivity" />
+
+    </application>
+
+</manifest>
